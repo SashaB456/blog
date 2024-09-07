@@ -1,0 +1,16 @@
+body{
+    background: #FFFFFF
+}
+.posts-list{
+    margin-left: 1%;
+    width: 40%
+}
+.date{
+    font-size: smaller;
+    color: #555;
+    float: right;
+}
+.categories-list{
+    margin-left: 5%;
+    width: 50%
+}

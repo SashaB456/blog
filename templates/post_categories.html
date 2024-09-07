@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h4>Категорія {{name}}</h4>
+<div class="posts-list">
+   <ul class="list-group">
+      {% for p in posts_list %}
+      <li class="list-group-item">
+         {{ p[2] }}
+         <span class="date">{{ p[3] }}</span>
+      </li>
+      {% endfor %}
+   </ul>
+</div>
+<div class="mb-3">
+   <form method="post">
+      <textarea type="text" name="text_input" placeholder="Введіть текст" id="1" class="form-control"></textarea>
+      <input type="submit" name="submit" value="Надіслати" id="2" class="btn btn-primary">
+   </form>
+</div>
+{% endblock %}
