@@ -38,3 +38,9 @@ def addPosts(category_id, text):
     cursor.execute("INSERT INTO post (category_id, text) VALUES (?, ?)", [category_id, text] )
     conn.commit()
     close()
+def getAmount(category_id):
+    open()
+    cursor.execute("SELECT count(id) FROM post WHERE category_id == ?", category_id)
+    result = cursor.fetchone()
+    close()
+    return result

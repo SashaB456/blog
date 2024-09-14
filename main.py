@@ -23,7 +23,7 @@ def posts_in_category(id):
             db.addPosts(id, post_text)
             return redirect(f'/post/category/{id}')
     
-    return render_template("post_categories.html", posts_list=db.getPostsInCategories(id), name=db.getCategoryByID(id)[0])
+    return render_template("post_categories.html", posts_list=db.getPostsInCategories(id), name=db.getCategoryByID(id)[0], amount=db.getAmount(id))
 
 
 app.run(debug=True, host="0.0.0.0")
