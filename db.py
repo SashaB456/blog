@@ -44,3 +44,8 @@ def getAmount(category_id):
     result = cursor.fetchone()
     close()
     return result
+def deletePost(id):
+    open()
+    cursor.execute("DELETE FROM post WHERE id == ?", [id])
+    conn.commit()
+    close()

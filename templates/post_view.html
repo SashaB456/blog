@@ -3,5 +3,8 @@
 Список постів
 {% for p in posts_list %}
 <p> {{ p }}</p>
+<span class="delete"> 
+    <a href="/post/delete/{{ p[0] }}">X</a> 
+ </span>
 {% endfor %}
 {% endblock %}

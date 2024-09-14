@@ -24,6 +24,8 @@ def posts_in_category(id):
             return redirect(f'/post/category/{id}')
     
     return render_template("post_categories.html", posts_list=db.getPostsInCategories(id), name=db.getCategoryByID(id)[0], amount=db.getAmount(id))
-
-
+@app.route('/post/delete/<id>')
+def delete_post(id):
+    db.deletePost(id)
+    return redirect('/post/view')
 app.run(debug=True, host="0.0.0.0")

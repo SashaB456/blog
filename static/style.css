@@ -14,3 +14,12 @@ body{
     margin-left: 5%;
     width: 50%
 }
+.delete{
+    position: relative;
+    bottom: 15px;
+    float: right;
+}
+.delete a {
+    color: red;
+    text-decoration: none;
+}

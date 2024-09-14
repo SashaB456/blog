@@ -6,6 +6,9 @@
       {% for p in posts_list %}
       <li class="list-group-item">
          {{ p[2] }}
+         <span class="delete"> 
+            <a href="/post/delete/{{ p[0] }}">X</a> 
+         </span>
          <span class="date">{{ p[3] }}</span>
       </li>
       {% endfor %}
